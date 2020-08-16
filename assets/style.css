@@ -1,21 +1,17 @@
-/* Fonts Used */
 @import url('https://fonts.googleapis.com/css?family=Bangers');
-
-@import url('https://fonts.googleapis.com/css?family=Krub:400,700');
-
-/* ....Navigation Bar....... */
 
 header {
   width           : 100%;
-  height          : 75px;
+  height          : 100px;
   background-color: #c72c17;
   z-index         : 20;
-  position        : fixed;
+  position        : relative;
   justify-content : space-between;
   top             : 0;
   display         : flex;
   box-shadow      : 2px 3px 12px rgba(0, 0, 0, .4);
   align-items     : center;
+  border-bottom   : 6px solid black;
 }
 
 main {
@@ -27,44 +23,44 @@ a {
 }
 
 #logo {
-  margin-left: 15px;
+    position: absolute;
+  left: 50px;
+  top: 50px;
+  margin: auto;
+  height: 300px;
+  width: 300px;
+  border: 10px solid black;
+  border-radius: 50%;
 }
 
 #logo-text {
-  color: lightgray;
-}
+    font-size: 60px;
+    text-align: center;
+    letter-spacing: 0.05em;
+    -webkit-text-stroke-width: 4px;
+    -webkit-text-stroke-color: black;
+    color: lightgray;
+    text-shadow: 3px 3px 2px pink, 6px 6px 5px orange;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -70px;
+    margin: auto;
 
-.nav-right {
-  display: flex;
-}
-
-.nav-right a {
-  color: lightgrey;
-}
-
-.nav-right a:hover {
-  display: flex;
-  color  : white;
 }
 
 .nav-right div {
-  margin     : 0 20px;
-  font-size  : 1.2rem;
-  font-weight: 700;
-}
+    margin     : 0 20px;
+    font-size  : 1.2rem;
+    font-weight: 700;
 
-.nav-left {
-  display        : flex;
-  align-items    : center;
-  justify-content: center;
 }
-
+  
 .nav-left h4 {
-  display: inline;
+    display: inline;
 }
-
-
-
+  
+  
 body {
   font-family: 'Krub', sans-serif;
   font-weight: thin;
@@ -76,9 +72,12 @@ body {
 h1,
 h2 {
   color      : white;
-  font-size  : 4em;
+  text-align: center;
+  font-size  : 5em;
   font-weight: normal;
   font-family: 'Bangers', cursive !important;
+  color: white;
+  display: block;
 }
 
 body:after {
@@ -93,7 +92,7 @@ body:after {
   height                : 150%;
   background            : url("./heroes.jpg");
   background-size       : contain;
-  /* background-position: 600px -200px; */
+
 
   filter: blur(0px);
 }
@@ -104,7 +103,6 @@ h1 {
   z-index  : 10;
 }
 
-/* ................Media Queries.......... */
 @media (max-width: 768px) {
 
   h1 {
@@ -113,7 +111,7 @@ h1 {
 
   p {
     display        : none;
-    /*     overflow: hidden; */
+
     width          : 100%;
     height         : 30%;
   }
@@ -123,7 +121,6 @@ h1 {
   }
 }
 
-/* ..........Main CSS for index.html............. */
 
 ::-webkit-input-placeholder {
   color: rgba(170, 169, 169, 0.856);
@@ -136,12 +133,17 @@ h1 {
 #search-box {
   display       : flex;
   flex-direction: column;
-  width         : 60%;
+  width         : 100%;
   max-width     : 500px;
 }
 
 div.input {
-  position: relative;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
   height  : 80px;
 }
 
@@ -156,30 +158,36 @@ div.input input {
 }
 
 .superman {
-  margin: 20% auto;
+  margin: auto;
 }
 
 div.superman:before {
   content          : '';
   display          : block;
-  width            : 250px;
-  height           : 45px;
-  background       : #E8110F;
-  -webkit-transform: matrix(-1, 0, -0.5, 1, 0, 0);
-  transform        : matrix(-1, 0, -0.5, 1, 0, 0);
+  width            : 500px;
+  height           : 50px;
+  color: white;
+  text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
   position         : absolute;
   top              : 0;
   z-index          : 0;
-  left             : -9px;
   border-radius    : 2px;
 }
 
 div.superman input {
-  border       : 2px solid #FBC700;
-  color        : #FFFFFF;
-  background   : #1B6AA5;
-  box-shadow   : 0 10px 10px -10px #FBC700;
+  border       : 10px solid #000000;
   border-radius: 30px;
+  font-family: 'Bangers', cursive !important;
+  text-align: center;
+  font-size: 40px;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: black;
+  text-shadow:  0 0 5px darkblue;
+  letter-spacing: 0.09em;
+  color        : #FFFFFF;
+  background   : #d4e218;
+  box-shadow   : 0 5px 30px 20px #23f034;
+  
 }
 
 @-webkit-keyframes fly {
@@ -210,8 +218,6 @@ div.superman input {
   }
 }
 
-/* .....CSS for Results box..... */
-
 #results {
   width        : 100%;
   border-radius: 8px;
@@ -236,7 +242,6 @@ div.superman input {
 
 .result-card-image {
   height  : 100px;
-  /* width: 30px; */
 }
 
 .result-card-container {
@@ -247,80 +252,21 @@ div.superman input {
   justify-content: space-around;
 }
 
-
-.bg-red,
-.bg-green,
-.detailsButton {
-  border       : 1px solid white;
-  border-radius: 8px;
-  position     : relative;
-  z-index      : 10;
-  color        : white;
-  text-align   : center;
-  background   : rgba(0, 0, 0, .3);
-  outline      : none;
-  box-shadow   : 0 0 10px rgba(0, 0, 0, .5);
-  transition   : all .2s;
-}
-
-.bg-red:hover,
-.bg-green:hover,
-.detailsButton:hover {
-  background    : rgba(255, 255, 255, .8);
-  color         : black;
-  box-shadow    : 0 0 10px rgba(255, 255, 255, .5);
-  mix-blend-mode: screen;
-  cursor        : pointer;
-}
-
-.bg-green {
-  background-color: green
-}
-
-.bg-red {
-  background-color: tomato
-}
-
-.detailsButton:active {
-  transform: translateY(2px);
-  cursor   : pointer;
-}
-
-
-/* .........Superman Flying Animation.......... */
-.sky .star {
-  position : absolute;
-  animation: stars 5s linear infinite;
-}
-
-.sky .superman-fly {
+.superman-fly {
   position  : absolute;
-  animation : flying 5s linear infinite;
-  margin-top: 7%;
-}
-
-@keyframes stars {
-  0% {
-    transform: translateX(0px);
-  }
-
-  100% {
-    transform: translateX(-200px);
-  }
+  animation : flying 2s linear infinite;
+  margin-top: 07%;
 }
 
 @keyframes flying {
   from {
-    transform: translateX(0);
+    transform: translateX(-300px);
   }
 
   to {
-    transform: translateX(1300px);
+    transform: translateX(1600px);
   }
 }
-
-
-/* .......... Main CSS for details.html............ */
 
 .card {
   margin         : 10% auto;
@@ -489,76 +435,4 @@ div.superman input {
 .info-content {
   text-align: right;
   animation : fadeIn 5s;
-}
-
-#fav-icon {
-  transition: 0.5s;
-  font-size : 1.2rem;
-  color     : crimson;
-}
-
-#fav-icon:hover {
-  transform: scale(1.8);
-  cursor   : pointer;
-}
-
-/* .......CSS for Snackbar........ */
-
-#snackbar {
-  border-radius   : 2px;
-  padding         : 15px;
-  position        : fixed;
-  visibility      : hidden;
-  min-width       : 300px;
-  margin-left     : -125px;
-  color           : white;
-  background-color: rgb(29, 139, 29);
-  text-align      : center;
-  left            : 50%;
-  top             : 80px;
-  z-index         : 30;
-}
-
-#snackbar.visible {
-  visibility: visible;
-  animation : fadein 0.7s, fadeout 0.7s 3s;
-}
-
-/* ..........Main CSS for favourites.html.......... */
-
-#fav-card {
-  display        : flex;
-  flex-direction : row;
-  flex-wrap      : wrap;
-  justify-content: center;
-  width          : 100%;
-  min-height     : 100vh;
-  margin         : 80px auto;
-}
-
-#fav-card .card {
-  width           : 15%;
-  height          : 350px;
-  display         : flex;
-  flex-direction  : column;
-  justify-content : center;
-  align-items     : center;
-  background-color: #151515;
-  margin          : 20px;
-}
-
-#fav-card .card .avatar {
-  position     : relative;
-  border-radius: 10px 10px 0px 0px;
-  width        : 94%;
-  height       : 90%;
-  z-index      : 1;
-  overflow     : hidden;
-  animation    : fadeIn 1.5s;
-  border       : 6px solid crimson;
-}
-
-#fav-card .card .detailsButton {
-  margin : 20px auto;
-  padding: 0px 20px;
 }
