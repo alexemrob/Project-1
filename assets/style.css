@@ -436,3 +436,6 @@ div.superman input {
   text-align: right;
   animation : fadeIn 5s;
 }
+#add-movie{
+  margin-top: 200px;
+}
