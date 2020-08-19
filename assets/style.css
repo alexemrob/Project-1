@@ -439,3 +439,8 @@ div.superman input {
 #add-movie{
   margin-top: 200px;
 }
+#results{
+  background-color: white;
+  text-align: center;
+  margin-top: 400px;
+}
