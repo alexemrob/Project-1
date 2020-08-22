@@ -4,41 +4,108 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Favicon -->
-  <link rel="icon" href="assets/logo.png" type="image/gif">
-  <!-- Custom stylesheets -->
+  <!-- 
+  <link rel="icon" href="assets/logo.png" type="image/gif"> -->
+
   <link rel="stylesheet" href="assets/style.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
   <title>Superheroes</title>
 </head>
 
 <body">
-  <div id="snackbar"></div>
-  <!-- NAVIGATION BAR -->
+
   <header>
-    <a href="#">
-      <div class="nav-left">
-        <img id="logo" src="assets/logo.png" width="50px">
-        <div id="logo-text">
-          <h1>ruben is awesome</h1>
-        </div>
+    <div class="nav-left">
+      <img id="logo" src="assets/superlogo.gif">
+    </div>
+
+    <div class="nav-right">
+      <div id="logo-text">
+        <h1>Superhero Search Engine</h1>
       </div>
-    </a>
+    </div>
   </header>
 
   <main>
     <div class="sky" id="animate">
-      <img class="superman-fly" height="20%" src="https://i.ibb.co/7jTf81q/superman.png" alt="" />
+      <img class="superman-fly" height="25%" src="https://i.ibb.co/7jTf81q/superman.png" alt="" />
     </div>
+    <!--search input-->
     <div id="search-box" class="input superman">
-      <input id="inputName" type="text" name="superheroName" placeholder="Your SuperHero name Here!!">
-      <div id="results">
+      <div>
+        <input id="inputName" type="text" name="superheroName" placeholder="Your SuperHero name Here!!">
+
       </div>
+      <!-- Rendered Buttons will get Dumped Here  -->
+      <div id="buttons-view"></div>
+    <!-- Button triggers new movie to be added -->
+    <div><input id="add-movie" type="submit" value="Add a Hero!"></div>
     </div>
+    
+<div class="container">
+  <div class="row">  
+    <!-- Movies will Get Dumped Here -->
+    <div class="col-sm-12" id="results">
+    </div>
+  </div>
+</div>
+  <BR>
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12 hide" id="heroResults">
+      <h3>Hero Search Results:</h3>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="card-deck hide">
+
+        <div class="heroCards hide" >
+          <div class="card cardHero" style="width: 20rem;">
+            <div class="card-img-top0" id="center" alt="Hero picture">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title0"></h5>
+              <p class="card-text0"></p>
+              <a class="btn btn-primary heroBtn0">View this hero</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="heroCards hide" >
+          <div class="card cardHero" style="width: 20rem;">
+            <div class="center card-img-top1" id="center" alt="Hero picture">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title1"></h5>
+              <p class="card-text1"></p>
+              <a class="btn btn-primary heroBtn1">View this hero</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="heroCards hide" >
+          <div class="card cardHero" style="width: 20rem;">
+            <div class="center card-img-top2" id="center" alt="Hero picture">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title2"></h5>
+              <p class="card-text2"></p>
+              <a class="btn btn-primary heroBtn2">View this hero</a>
+            </div>
+          </div>
+        </div>
+
+    </div>
+  </div>
+</div>
   </main>
 
-  <!-- Script files -->
-
-  <script src="scripts/index.js"></script>
-</body>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+  <script src="./assets/script.js"></script>
+  <script src="./assets/scriptHero.js"></script>
+  </body>
 
 </html>
