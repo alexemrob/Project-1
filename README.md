@@ -1,8 +1,11 @@
 # Project-1
 <h1>Superhero Search Engine</h1>
->>place image of page here<<
 <br>
->>place deployed link here<<
+<a href="https://alexemrob.github.io/Project-1/">Click Here to Visit Page!</a>
+<br><br>
+<img src="./assets/SS.png" alt="website screenshot">
+<br><br>
+
 <h2>Key points in building this application:</h2>
 <ul><li>Utilizing Multiple Server-side APIs</li>
   <li>Working with Git branching workflow</li>
