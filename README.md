@@ -1,8 +1,9 @@
 # Project-1
 <h1>Superhero Search Engine</h1>
->>place image of page here<<
+<a href="https://alexemrob.github.io/Project-1/">Click Here to Visit Page</a>
 <br>
->>place deployed link here<<
+<img src="./assets/images/SS.png" alt="website screenshot">
+<br>
 <h2>Key points in building this application:</h2>
 <ul><li>Utilizing Multiple Server-side APIs</li>
   <li>Working with Git branching workflow</li>
@@ -10,7 +11,8 @@
 <h2>Key points in using this application:</h2>
 <ul><li>user inputs any super hero into the search box</li>
   <li>search returns organzed display of related information</li>
-  <li>user recieves movie data based on the specific hero requested</li></ul>
+  <li>click on poster for user to recieve profile & movie<br>
+    data based on the specific hero requested</li></ul>
  <h3>Project Group Members</h3>
  <ul><li>Aeryk Marrero</li>
   <li>Alexandria Robertson</li>
