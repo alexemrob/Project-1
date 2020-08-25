@@ -110,7 +110,7 @@ h1 {
   }
 
   p {
-    display        : none;
+    /* display        : none; */
 
     width          : 100%;
     height         : 30%;
@@ -235,7 +235,7 @@ div.superman input {
   box-shadow     : 2px 3px 12px rgba(0, 0, 0, .4);
   background     : linear-gradient(to right, rgba(40, 40, 60, 1) 0%, rgba(40, 0, 60, 0) 90%);
   display        : flex;
-  flex-direction : row;
+  flex-direction : column;
   justify-content: space-between;
 }
 
@@ -276,7 +276,7 @@ div.superman input {
   flex-direction : column;
   align-items    : center;
   width          : 50%;
-  background     : #151515;
+  background     : linear-gradient(to right, rgba(40, 40, 60, 1) 0%, rgba(40, 0, 60, 0) 90%);
   justify-content: center;
   font-family    : 'Krub', sans-serif;
 }
@@ -437,10 +437,21 @@ div.superman input {
   animation : fadeIn 5s;
 }
 #add-movie{
-  margin-top: 200px;
+  margin-left: 550px;
+  width: 50px;
 }
 #results{
   background-color: white;
   text-align: center;
   margin-top: 400px;
+  width: 50%;
+}
+p{
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+h2{
+  color: rgb(0, 2, 0);
+}
+#results2{
+
 }
