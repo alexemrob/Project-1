@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Bangers');
+/* @import url('https://fonts.googleapis.com/css?family=Bangers');
 
 header {
   width           : 100%;
@@ -128,7 +128,7 @@ h1 {
 
 ::-moz-placeholder {
   text-align: center;
-}
+} */
 
 #search-box {
   display       : flex;
@@ -268,7 +268,7 @@ div.superman input {
   }
 }
 
-.card {
+/* .card {
   margin         : 10% auto;
   border-radius  : 10px;
   box-shadow     : 0 10px 25px 5px rgba(0, 0, 0, 0.2);
@@ -279,9 +279,9 @@ div.superman input {
   background     : #151515;
   justify-content: center;
   font-family    : 'Krub', sans-serif;
-}
+} */
 
-.card .ds-top {
+/* .card .ds-top {
   position     : absolute;
   border-radius: 10px 10px 0px 0px;
   width        : 50%;
@@ -292,7 +292,7 @@ div.superman input {
   height       : 250px;
   background   : crimson;
   animation    : dsTop 1.5s;
-}
+} */
 
 .card-details {
   width         : 100%;
@@ -436,3 +436,34 @@ div.superman input {
   text-align: right;
   animation : fadeIn 5s;
 }
+#add-movie{
+  margin-top: 200px;
+}
+#results{
+  background-color: white;
+  text-align: center;
+  margin-top: 400px;
+}
+.cardHero{
+  background-color: rgb(112, 83, 83);
+  box-sizing: border-box;
+}
+.imgEdit{
+  height: 20rem;
+  width: 15rem;
+}
+
+#heroResults{
+  background-color: white;
+  text-align: center;
+}
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+.hide{
+  display: none;
+}
+
