@@ -1,11 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Bangers');
-
-
 html { 
     width: 100%; 
-    min-height: 100%; 
+    min-height: 100%;
+    height: 10%; 
 }
-
 header {
     width           : 100%;
     height          : 120px;
@@ -16,33 +14,29 @@ header {
     border-bottom   : 6px solid black;
     white-space: nowrap;
 }
-
 body {
     display               : block;
-    position              : relative;
-    top                   : 0;
+    position              : absolute;
+    /* top                   : 0;
     left                  : 0;
     margin                : 0;
-    padding: 0;
+    padding: 0; */
     width                 : 100%;
     height                : 100%;
-    background            : url("./heroes.jpg");
+    background            : url("./marveldc.jpg");
     background-size       : cover;
     background-repeat: no-repeat;
-    white-space: nowrap;
   }
-
 #logo {
     position: relative;
     left: 5px;
     top: 5px;
     margin: auto;
-    height: 300px;
-    width: 300px;
+    height: 30%;
+    width: 30%;
     border: 10px solid black;
     border-radius: 50%;
 }
-
 #logo-text {
     font-size: 20px;
     -webkit-text-stroke-width: 4px;
@@ -54,7 +48,6 @@ body {
     right: 0;
     margin: 0 auto;
 }
-
 h1 {
     text-align: center;
     color      : white;
@@ -66,13 +59,12 @@ h1 {
     margin: auto; 
     letter-spacing: 0.09em;
 }
-
-#search-box {
-    margin-left: 500px;
+/* #search-box {
+    display:inline-block;
+    margin-left: 300px;
     align-content: center;
-    width         : 100%;
-}
-
+    width         : 60%;
+} */
 #inputName {
     border       : 10px solid #000000;
     border-radius: 60px 60px 60px 60px;
@@ -88,7 +80,6 @@ h1 {
     box-shadow   : 0 5px 30px 20px #23f034;
     display: inline;
 }
-
 #add-movie{
     margin-left: 20px;
     display: inline-block;
@@ -107,13 +98,11 @@ h1 {
     background-color: #000000;
     background-image: linear-gradient(315deg, #bb84e9 0%, #b82e1f 74%);
 }
-
 .superman-fly {
     position: relative;
     animation : flying 2s linear infinite;
     margin-top: -140px;
 }
-
 @keyframes flying {
     from {
       transform: translateX(-300px);
@@ -123,7 +112,6 @@ h1 {
       transform: translateX(1200px);
     }
 }
-
 @-webkit-keyframes fly {
     0% {
       top: 0;
@@ -136,8 +124,6 @@ h1 {
     100% {
       top: 0;
     }
-}
-  
 @keyframes fly {
     0% {
       top: 0;
@@ -151,36 +137,98 @@ h1 {
       top: 0;
     }
 }
-
 .row {
     position: relative;
     width: 100%;
-
 }
-.col-lg-6 {
-    position: relative;
-    width: 100%;
-}
-
 .container {
     align-content: stretch;
     margin-left: 20px;
     margin-right: 20px;
     margin-top: 20px;
-    height: 600px;
+    height: 700px;
     border: 5px solid rgb(231, 228, 31);
     border-radius: 30px 30px 30px 30px;
-    background-image: url(./allheroes.jpg);
+    background-color: white;    
     background-size: cover;
     background-repeat: no-repeat;
+    overflow: scroll;
 }
 .card {
-    display:inline-block;
+    /* display:inline-block; */
     margin-left: 15px;
     margin-top: 20px;
     align-content: stretch;
     height: 550px;
-    width:33%;
+    /* width: 100%; */
     border: 5px solid rgb(238, 19, 19);
     border-radius: 30px 30px 30px 30px;
+    display: inline-flex;
+}
+h5{
+  font-size  : 4em;
+  font-weight: normal;
+  font-family: 'Bangers', cursive !important;
+  color: red;
+  letter-spacing: 0.09em;
+  font-size: 40px;
+
+}
+/* #heroCard{
+  display:  inline;
+  margin-left: 15px;
+  margin-top: 20px;
+  align-content: normal;
+  height: 10%;
+  width:  10%;
+  border: 5px solid rgb(238, 19, 19);
+  border-radius: 0px;
+  overflow: scroll;
+}
+#movieCard{
+  display:inline-block;
+  margin-left: 15px;
+  margin-top: 20px;
+  align-content: stretch;
+  height: 10%;
+  width:  10%;
+  border: 5px solid rgb(238, 19, 19);
+  border-radius: 0px;
+} */
+.hide{
+  display: none;
+}
+#testContainer{
+  align-content: stretch;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 20px;
+  height: auto;
+  border: 5px solid rgb(231, 228, 31);
+  border-radius: 30px 30px 30px 30px;
+  background-color: white;    
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow: scroll;
+}
+p.t{
+  color: red
+}
+.cardEdit{
+  /* float: left; */
+  width: 30%;
+  height: 10%;
+}
+#cardMovie{
+  height: auto;
+}
+#cardHero{
+}
+
+#heroContainer{
+  height: 600px;
+
+}
+#movieContainer{
+  height: 800px;
 }

@@ -1,60 +1,60 @@
 
 var movies = [];
 
-// displayMovieInfo function re-renders the HTML to display the appropriate content
 function displayMovieInfo() {
 
   var movie = $("#inputName").val();
   console.log(movie)
   var queryURL = "https://api.themoviedb.org/3/search/movie?api_key=4e2b560fdefd991469f809e56246ffa2&query=" + movie;
 
-  // Creating an AJAX call for the specific movie button being clicked
   $.ajax({
     url: queryURL,
-    method: "GET"
+    method: "GET",
   }).then(function (response) {
     console.log(response)
 
-    // Creating a div to hold the movie
-    var movieDiv = $("<div class='movie'>");
+    var arrayCount = response.results.length
+        
+    for (var i = 0; i < arrayCount; i++){
 
-    // Storing the title
-    var movie1title = response.results[0].original_title;
+    var movieTitle = response.results[i].original_title;
+    var movieReleased = response.results[i].release_date;
+    var moviePlot = response.results[i].overview;
+    var movieImgUrl = response.results[i].poster_path;
+    var popularity = response.results[i].popularity;
 
-    // Creating an element to have the title displayed
-    var pOne = $("<p>").text(movie1title);
+    $("#movieResults").append(`
+    <div class="card cardEdit" id="cardMovie">
+    <div class="card-image waves-effect waves-block waves-light">
+      <img class="activator" src="https://image.tmdb.org/t/p/w500${movieImgUrl}">
+    </div>
+    <div class="card-content">
+      <span class="card-title activator grey-text text-darken-4">View Details<i class="material-icons right">more_vert</i></span>
+      <p>"${movieTitle}"</p>
+      <p>Released: ${movieReleased}</p>
+      
+    </div>
+    <div class="card-reveal">
+      <span class="card-title grey-text text-darken-4">Movie Details<i class="material-icons right">close</i></span>
+      <p class="t">Movie Plot:</p>
+      <p>"${moviePlot}"</p>
+      <p class="t">Popularity (On TMDb):</p>
+      <p>${popularity}</p>
+    </div>
+  </div>
+    `)
 
-    // Displaying the title
-    movieDiv.append(pOne);
+    }
+  });
+}
 
-    // Storing the release year
-    var movie1released = response.results[0].release_date;
+$("#add-movie").on("click", function () {
+  $("#movieContainer").removeClass("hide");
+  $(".movie").empty();
+  $("#movieResults").empty();
 
-    // Creating an element to hold the release year
-    var pTwo = $("<p>").text("Released: " + movie1released);
-
-    // Displaying the release year
-    movieDiv.append(pTwo);
-
-    // Storing the plot
-    var movie1plot = response.results[0].overview;
-
-    // Creating an element to hold the plot
-    var pThree = $("<p>").text("Plot: " + movie1plot);
-
-    // Appending the plot
-    movieDiv.append(pThree);
-
-    // Retrieving the URL for the image
-    var movie1imgURL = response.results[0].poster_path;
-
-    // Creating an element to hold the image
-    var image1 = $("<img>").attr("src", "https://image.tmdb.org/t/p/w500" + movie1imgURL);
-
-    // Appending the image
-    movieDiv.append(image1);
-
-    // Storing the title
+  displayMovieInfo();
+}); // Storing the title
     var movie2title = response.results[1].original_title;
 
     // Creating an element to have the title displayed
